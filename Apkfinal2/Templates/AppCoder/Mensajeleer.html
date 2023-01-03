@@ -1,0 +1,22 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenido1 %}
+
+<h1 style="color: blue;">Mensajes Recibidos</h1>
+
+{% endblock %}
+
+
+{% block contenido_que_cambia %}
+
+{% for mensaje in mensajes %}
+<h6> {{mensaje}} </h6>
+
+{% endfor %}
+
+
+
+
+{% endblock %}

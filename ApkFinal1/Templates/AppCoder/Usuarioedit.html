@@ -1,0 +1,19 @@
+{% extends 'AppCoder/padre.html' %}
+{% load  static %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url "Usuarioedit" %}" method="POST"> {% csrf_token %}
+
+    <table>
+        {{ form.as_table }}
+    </table>
+
+    <input type="submit" value="EDIT USER">
+    {{user.username}}
+
+</form>
+
+<h2>{{ mensaje1 }} </h2>
+
+{% endblock %}

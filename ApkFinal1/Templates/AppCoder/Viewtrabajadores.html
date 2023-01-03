@@ -1,0 +1,24 @@
+{% extends 'AppCoder/padre.html' %}
+{% load  static %}
+
+{% block contenido_que_cambia %}
+
+
+{% for trabajo in trabajadores %}
+
+<h6>{{trabajo}}</h6>
+  {% if user.is_authenticated %}
+  <a class="btn btn-info" href="{% url "Trabajadoredit" trabajo.id %}">EDITAR TRABAJADOR</a>
+  <a class="btn btn-danger" href= "{% url "TrabajadorDelete" trabajo.id %}"> ELIMINAR TRABAJADOR</a>
+  {% endif %}      
+
+{% endfor %}
+<h2>       </h2>
+{% if user.is_authenticated %}
+<a class="btn btn-success" href= "{% url "Trabajador" %}"> CREAR TRABAJADOR</a>
+{% endif %}
+<h4 class="header-title"><strong class="text-primary">{{ mensaje2 }}</h4>
+
+
+{% endblock  %}
+

@@ -1,0 +1,15 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenido1 %}
+
+<h1>Chat</h1>
+
+<a class="btn btn-info" href="{% url "Mensajeform"  %}">ENVIAR MENSAJE</a>
+<a class="btn btn-info" href= "{% url "Mensajeleer"   %}"> VER MENSAJES</a>
+<a class="btn btn-info" href="{% url "Mensajeenviado"  %}">MENSAJES ENVIADOS</a>
+
+
+
+{% endblock %}

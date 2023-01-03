@@ -1,0 +1,18 @@
+{% extends 'AppCoder/padre.html' %}
+{% load  static %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url "Avataredit" %}" method="POST" enctype = "multipart/form-data"> {% csrf_token %}
+
+    <table>
+        {{ form1.as_table }}
+    </table>
+
+    <input type="submit" value="MOFICAR AVATAR">
+
+</form>
+
+<h2>{{ mensaje1 }} </h2>
+
+{% endblock %}

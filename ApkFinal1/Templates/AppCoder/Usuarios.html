@@ -1,0 +1,20 @@
+{% extends 'AppCoder/padre.html' %}
+{% load  static %}
+
+{% block contenido_que_cambia %}
+
+
+<h6>{{usuario}}</h6>
+
+
+{% if user.is_authenticated %}
+  <a class="btn btn-info" href="{% url "Usuarioedit"  %}">EDITAR USUARIO</a>
+  <a class="btn btn-danger" href= "{% url "Deleteuser" user.id %}" > ELIMINAR USUARIO</a>
+{% else %}
+ <h1>""</h1>
+
+
+{% endif %}
+
+
+{% endblock  %}

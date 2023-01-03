@@ -1,0 +1,45 @@
+{% extends 'AppCoder/padre.html' %}
+{% load  static %}
+
+
+{% block contenido_que_cambia %}
+<h2>LOGIN</h2>
+
+{% endblock  %}
+
+{% block contenido %}
+
+
+{% if user.is_authenticated %}
+<h2>Esta logueado actualmente</h2>
+
+{% else %}
+
+<form action="{% url "Login" %}" method="POST"> {% csrf_token %}
+
+    <table>
+        {{ form.as_table }}
+    
+    </table>
+
+<input type="submit" value="INGRESAR">
+
+
+{% endif %}
+</form>
+
+<h5 class="header-title"><strong class="text-primary">{{ mensaje }}</h5>
+
+    {{mensaje0}}
+
+    {{mensaje001}}
+
+
+    
+
+{% endblock  %}
+
+
+
+
+

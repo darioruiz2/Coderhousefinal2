@@ -1,0 +1,25 @@
+{% extends 'AppCoder/padre.html' %}
+{% load  static %}
+
+{% block contenido_que_cambia %}
+
+<h3 class="header-title"><strong class="text-primary">Registrar Trabajador</strong><span></span></h3>
+
+{% endblock  %}
+
+{% block contenido %}
+
+<form action="{% url "Trabajador" %}" method= "POST"> {% csrf_token %}
+<table>
+    {{ form.as_table }}
+</table>
+<input type="submit" value="CREAR TRABAJADOR">
+</form>
+
+{{ mensaje }}
+
+{% endblock  %}
+
+
+
+

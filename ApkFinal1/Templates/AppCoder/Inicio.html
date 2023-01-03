@@ -1,0 +1,27 @@
+{% extends 'AppCoder/padre.html' %}
+{% load  static %}
+
+{% block contenido_que_cambia %}
+
+<h3 class="header-title"><strong class="text-primary">EMPRESA</strong><span>34640</span></h3>
+
+{% if user.is_authenticated %}
+<h2>Esta logueado actualmente</h2>
+
+{% else %}
+<h1></h1>
+
+{% endif %}
+{% endblock  %}
+
+{% block contenido %}
+
+<h4 class="header-title"><strong class="text-primary">{{ mensaje }}</h4>
+
+<h3>{{ mensaje1 }}</h3>
+
+<h3>{{mensaje0 }}</h3>
+
+<h3>{{ mensaje3 }}</h3>
+
+{% endblock  %}
